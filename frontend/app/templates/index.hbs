@@ -13,3 +13,29 @@
 {{#each model as |rental|}}
 {{rental-listing rental=rental}}
 {{/each}}
+
+<div class="jumbo">
+  <form>
+    <h2>Add new</h2>
+      <p>
+        Title: {{input value=title }}
+      </p>
+      <p>
+        Owmer: {{input value=owner }}
+      </p>
+      <p>
+        City: {{input value=city }}
+      </p>
+      <p>
+        Type: {{input value=type }}
+      </p>
+      <p>
+        Image: {{input value=image }}
+      </p>
+      <p>
+        Bedrooms: {{input value=bedrooms }}
+      </p>
+
+      <button class="button" type="submit" {{action 'add'}}>Add !</button>
+  </form>
+</div>
