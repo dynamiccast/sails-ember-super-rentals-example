@@ -1,0 +1,41 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome!</h2>
+  <p>
+    We hope you find exactly what you're looking for in a place to stay.
+    <br>Browse our listings, or use the search box above to narrow your search.
+  </p>
+  {{#link-to 'about' class="button"}}
+  About Us
+  {{/link-to}}
+</div>
+
+{{#each model as |rental|}}
+{{rental-listing rental=rental}}
+{{/each}}
+
+<div class="jumbo">
+  <form>
+    <h2>Add new</h2>
+      <p>
+        Title: {{input value=title }}
+      </p>
+      <p>
+        Owmer: {{input value=owner }}
+      </p>
+      <p>
+        City: {{input value=city }}
+      </p>
+      <p>
+        Type: {{input value=type }}
+      </p>
+      <p>
+        Image: {{input value=image }}
+      </p>
+      <p>
+        Bedrooms: {{input value=bedrooms }}
+      </p>
+
+      <button class="button" type="submit" {{action 'add'}}>Add !</button>
+  </form>
+</div>
