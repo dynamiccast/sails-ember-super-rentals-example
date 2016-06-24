@@ -7,8 +7,26 @@
 
 module.exports = {
 
-  attributes: {
+  schema : true,
 
+  attributes: {
+    title: {
+      type: "string"
+    },
+    owner: {
+      type: "string"
+    },
+    city: {
+      type: "string"
+    },
+    type: {
+      type: "string"
+    },
+    image: {
+      type: "string"
+    },
+    bedrooms: {
+      type: "string"
+    }
   }
 };
-
